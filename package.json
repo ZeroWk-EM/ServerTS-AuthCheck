@@ -5,9 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "SET DB=prod&& npm run build && node ./dist/app.js",
-    "dev": "SET DB=prod&& npm run build && node ./dist/app.js",
+    "dev": "SET DB=dev&& npm run build && node ./dist/app.js",
     "build": "tsc",
-    "test": "export DB=dev&& npm run build && mocha ./dist/tests/*.js"
+    "test": "SET DB=dev&& npm run build && mocha ./dist/tests/*.js"
   },
   "keywords": [
     "api",
